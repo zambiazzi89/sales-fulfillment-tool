@@ -1,0 +1,100 @@
+type,microHoldDays,pickingDays3PL,casesPerPallet,itemNumber,description,WOC,shelfLife
+Baked Addins,4,1,60,AF01900,Baked Brownie: 20 lb,6,270
+Baked Addins,7,1,54,AF01917,Baked Birthday Cake: 20 lb,10,365
+Baked Addins,7,1,54,AF01947,Baked Pound Cake: 20 lb,5,365
+Baked Addins,7,0,54,AF01959,Baked Chocolate Cake: 20 lb,0,365
+Baked Addins,7,1,54,AF01971,Baked Brownie: 30 lb,8,270
+Baked Addins,7,1,54,AF01979,Baked Brownie: 30 lb,8,270
+Baked Addins,7,1,54,AF01987,Baked Brownie: 30 lb,8,270
+Baked Addins,7,1,60,AF01993,Baked Cheesecake: 20 lb,0,270
+Baked Addins,7,1,36,AF01994,Baked Pound Cake: 20 lb,10,365
+Baked Addins,7,1,54,AF01999,Baked Tiramisu Cake: 20 lb,0,270
+Bakery - Tubs,4,0,48,AF04209,Brownie Batter: NGMO 6 x 6 lb,0,365
+Bakery - Tubs,4,0,48,AF04277,Choc. Chunk Cookie Batter: NGMO 6 x 6 lb,0,365
+Extruded Addins,4,1,45,AF01517,Choc. Chip Cookie Dough: 40 lb,8,365
+Extruded Addins,4,1,60,AF01532,Choc. Chip Cookie Dough: 20 lb,6,365
+Extruded Addins,4,1,60,AF01534,Choc. Chip Cookie Dough: 20 lb,0,365
+Extruded Addins,4,1,60,AF01536,Choc. Chip Cookie Dough: 20 lb,0,365
+Extruded Addins,4,1,75,AF01538,Choc. Chip Cookie Dough: No Egg 20 lb,4,365
+Extruded Addins,7,0,75,AF01545,Pink Sugar Cookie Dough: No Egg 20 lb,0,270
+Extruded Addins,7,0,75,AF01546,Blue Sugar Cookie Dough: No Egg 20 lb,0,270
+Extruded Addins,7,0,75,AF01547,Green Sugar Cookie Dough: No Egg 20 lb,0,270
+Extruded Addins,7,1,60,AF01606,Choc. Chip Cookie Dough: No Egg 25 lb,8,365
+Extruded Addins,4,1,45,AF01607,Choc. Chip Cookie Dough: No Egg 40 lb,8,365
+Extruded Addins,4,1,120,AF01609,Choc. Chip Cookie Dough: No Egg 15 lb,6,365
+Extruded Addins,7,1,60,AF01614,Choc. Chip Cookie Dough: No Egg 25 lb,6,365
+Extruded Addins,4,1,45,AF01637,Choc. Chip Cookie Dough: No Egg 35 lb,6,365
+Extruded Addins,7,1,45,AF01638,Choc. Chip Cookie Dough: 35 lb,8,365
+Extruded Addins,4,1,60,AF01646,Brownie Dough: No Egg 20 lb,6,365
+Extruded Addins,4,1,45,AF01647,Brownie Dough: No Egg 35 lb,5,365
+Extruded Addins,7,1,45,AF01664,Peanut Butter Ckie Dough & Choc. Chip Ckie Dough Blend: No Egg 35 lb,0,270
+Extruded Addins,7,1,60,AF01666,Peanut Butter Cookie Dough: No Egg 20 lb,0,270
+Extruded Addins,7,1,45,AF01679,Choc. Chip Chocolate Dough: No Egg 35 lb,5,365
+Extruded Addins,4,1,75,AF01681,Choc. Chip Cookie Dough: No Egg 20 lb,8,365
+Extruded Addins,7,1,120,AF01689,Choc. Chip Cookie Dough: No Egg 15 lb,0,365
+Extruded Addins,7,1,60,AF01697,Fudge Brownie Dough: NGMO No Egg 25 lb,0,365
+Extruded Addins,7,1,60,AF01704,Fudge Brownie Dough: NGMO No Egg 25 lb,0,365
+Extruded Addins,4,1,45,AF01707,Choc. Chip Cookie Dough: 35 lb,0,365
+Extruded Addins,4,0,60,AF01711,Choc. Chip Cookie Dough: NGMO 23 lb,4,365
+Extruded Addins,4,1,36,AF01725,Choc. Chip Cookie Dough: No Egg 40 lb,8,365
+Extruded Addins,7,1,60,AF01731,Chocolate Coconut Truffle: No Egg 20 lb,0,365
+Extruded Addins,4,1,60,AF01737,Chocolate Truffle: No Egg 25 lb,0,365
+Extruded Addins,7,1,60,AF01747,Fudge Brownie Dough: NGMO No Egg 25 lb,0,365
+Extruded Addins,4,1,45,AF01756,Cookie Dough: No Chip No Egg 35 lb,4,365
+Extruded Addins,4,0,54,AF01792,Choc. Chip Cookie Dough: No Egg 30 lb,0,270
+Extruded Addins,4,0,54,AF01793,Birthday Cake Dough: No Egg 30 lb,0,270
+Extruded Addins,4,0,54,AF01794,Choc. Chip Peanut Butter Dough: No Egg 30 lb,0,270
+Extruded Addins,7,1,60,AF01808,Choc. Chip Cookie Dough: No Dairy No Egg 20 lb,0,365
+Extruded Addins,4,1,60,AF01819,Cookies & Cream Dough: No Egg 20 lb,0,365
+Extruded Addins,4,0,60,AF01824,Brownie Dough: No Egg 20 lb (9.07 kg),0,270
+Extruded Addins,4,1,60,AF01833,Choc. Chip Cookie Dough: No Egg 25 lb,0,365
+Extruded Addins,7,1,45,AF01842,Choc. Chip Cookie Dough: No Egg 35 lb,8,365
+Extruded Addins,4,1,60,AF01847,Choc. Chip Cookie Dough: No Egg 25 lb,4,365
+Extruded Addins,7,1,60,AF01855,Brownie Dough: NSA 25 lb,0,365
+Extruded Addins,7,1,75,AF01859,Cinnamon Bun Dough: 20 lb,0,365
+Extruded Addins,7,1,45,AF01865,Choc. Chip Cookie Dough: No Egg 40 lb,8,365
+Extruded Addins,7,1,120,AF01869,Choc Chip Cookie Dough: No Egg 15 lb,0,365
+Extruded Addins,7,1,60,AF01872,Cookie Dough: NGMO No Chip No Dairy No Egg No Soy 25 lb,0,365
+Extruded Addins,7,1,60,AF01873,Cheesecake Dough: NGMO No Egg No Soy 25 lb,0,365
+Extruded Addins,7,1,45,AF01875,Choc. Chip Cookie Dough: No Egg 40 lb,8,365
+Extruded Addins,7,1,60,AF01876,Cookie Dough: NGMO No Chip No Egg 25 lb,4,365
+Extruded Addins,4,1,36,AF01877,Choc. Chip Cookie Dough: 40 lb,8,365
+Extruded Addins,7,0,75,AF01879,Chocolate Cookie Dough: No Egg 20 lb,0,365
+Extruded Addins,4,0,75,AF01883,Peanut Butter Choc Chip Cookie Dough: No Egg 20 lb,0,270
+Extruded Addins,7,0,75,AF01884,Peanut Butter Cookie Dough: No Egg 20 lb,0,270
+Extruded Addins,7,0,75,AF01886,Choc. Chip Cookie Dough: No Egg 20 lb,8,365
+Extruded Addins,4,1,60,AF01888,Oatmeal Cookie Dough: No Egg 20 lb,0,270
+Extruded Addins,7,1,60,AF01893,Brownie Dough: NGMO No Egg 25 lb,0,365
+Extruded Addins,7,1,60,AF01895,Snickerdoodle Cookie Dough: No Egg 25 lb,0,365
+Extruded Addins,4,0,54,AF01897,Choc. Chip Cookie Dough: No Egg 30 lb,0,365
+Extruded Addins,4,0,60,AF04065,Choc. Chip Cookie Dough: FT-MB NGMO 20 lb,3,270
+Extruded Addins,4,0,60,AF04071,Choc. Chip Cookie Dough: FT-MB NGMO 20 lb,6,270
+Extruded Addins,4,0,60,AF04078,Choc. Chip Cookie Dough: FT-MB NGMO 20 lb,2,270
+Extruded Addins,4,0,60,AF04080,Choc. Chip Cookie Dough: FT-MB NGMO 23 lb,6,270
+Extruded Addins,4,0,54,AF04082,Sugar Cookie Dough: FT-MB NGMO 30 lb,1,270
+Extruded Addins,4,0,54,AF04084,Choc. Choc. Chip Cookie Dough: FT-MB NGMO 30 lb,1,270
+Extruded Addins,4,0,54,AF04086,Cinnamon Bun Dough: FT-MB NGMO No Dairy No Egg 30 lb,1,270
+Extruded Addins,4,0,54,AF04087,Gingerbread Cookie Dough: FT-MB NGMO No Soy 30 lb,1,270
+Extruded Addins,4,0,60,AF04090,Choc. Chip Cookie Dough: FT-MB NGMO No Dairy No Egg 20 lb,6,270
+Extruded Addins,4,0,60,AF04093,Choc. Chip Cookie Dough: FT-MB  NGMO No Dairy No Egg 20 lb,0,270
+Extruded Addins,4,0,60,AF04669,Peanut Butter Choc. Chip Cookie Dough: FT-MB NGMO No Egg 20 lb,6,270
+Novelties,4,0,120,AF01023,Chessters Ice Cream Novelty 24 ct 4 fl oz,0,365
+Powders,4,0,60,AF04240,Cookie Dough Powder: FT-MB NGMO 30 lb,4,365
+Powders,4,0,60,AF04290,Cookie Dough Powder: FT-MB NGMO No Dairy 30 lb,8,365
+Pouching,4,0,195,AFS1607,Choc. Chip Cookie Dough: No Egg 8 x 8 oz Pouches,0,270
+Pouching,4,0,195,AFS1646,Brownie Dough: No Egg 8 x 8 oz Pouches,0,270
+Pouching,4,0,120,AFS1792,Choc. Chip Cookie Dough: No Egg 6 x 8 oz pouches,0,270
+Pouching,4,0,120,AFS1793,Birthday Cake Dough: No Egg 6 x 8 oz pouches,0,270
+Pouching,4,0,120,AFS1794,Choc. Chip Peanut Butter Dough: No Egg 6 x 8 oz pouches,0,270
+Pouching,4,0,195,AFS1883,Peanut Butter Choc. Chip Cookie Dough: No Egg 8 x 8 oz Pouches,0,270
+Pouching,4,0,60,AFS1897,Choc. Chip Cookie Dough: No Egg 12 x 20 oz Pouches,0,365
+Pouching,7,1,195,AFS4082,Sugar Cookie Dough: FT-MB NGMO 8 x 8 oz. Pouches,0,270
+Pouching,4,1,195,AFS4086,Cinnamon Bun Dough: FT-MB NGMO No Dairy No Egg 8 x 8 oz,0,270
+Pouching,4,1,195,AFS4087,Gingerbread Cookie Dough: FT-MB NGMO No Soy 8 x 8 oz,0,270
+Pouching,4,1,195,AFS4169,Peanut Butter CC Cookie Dough: FT-MB NGMO No Egg 8x8 oz Pouches,0,270
+Pouching,4,1,195,AFS4178,Choc Chip Dough: FT-MB NGMO 8x8oz Pouches,0,270
+Pouching,4,1,195,AFS4184,Choc. Choc. Chip Cookie Dough: FT-MB NGMO 8 x 8 oz. Pouches,0,270
+Pouching,4,1,195,AFS4185,Half Baked: FT-MB NGMO 8 x 6 oz. Pouches,0,270
+Pouching,7,1,195,AFS4186,Tonight Dough: FT-MB NGMO 8 x 8 oz Pouches,0,270
+Pouching,4,1,195,AFS4190,Choc. Chip Dough: FT-MB NGMO No Dairy No Egg 8x8oz Pouches,0,270
+Corp Giving Donation,3,0,1,AF07000,Chesster Donation Choc. Chip Cookies,0,180

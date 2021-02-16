@@ -1,0 +1,3 @@
+export const LTL_LIST_REQUEST = 'LTL_LIST_REQUEST'
+export const LTL_LIST_SUCCESS = 'LTL_LIST_SUCCESS'
+export const LTL_LIST_FAIL = 'LTL_LIST_FAIL'

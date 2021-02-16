@@ -1,0 +1,59 @@
+.customer-landing-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  .logo-and-name {
+    padding-bottom: 2rem;
+    display: flex;
+    align-items: center;
+    .logo-container {
+      padding: 10px;
+      width: 125px;
+      height: 100px;
+    }
+    .customer-name {
+      padding-left: 1rem;
+      display: flex;
+      justify-content: center;
+      width: 82%;
+    }
+  }
+
+  .customer-info-menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    .menu-option {
+      color: rgba(255, 255, 255, 0.75);
+      text-decoration: none;
+      border-radius: 10px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 250px;
+      height: 250px;
+      background: rgb(115, 145, 143);
+      background: linear-gradient(
+        180deg,
+        rgba(115, 145, 143, 1) 0%,
+        rgb(88, 109, 107) 100%
+      );
+      font-weight: bold;
+      font-size: 1.2rem;
+      &:hover {
+        cursor: pointer;
+        background: rgba(115, 145, 143, 0.75);
+        background: linear-gradient(
+          180deg,
+          rgba(115, 145, 143, 0.8) 0%,
+          rgba(88, 109, 107, 0.8) 100%
+        );
+      }
+      .menu-option-icon {
+        width: 75px;
+        height: 75px;
+      }
+    }
+  }
+}

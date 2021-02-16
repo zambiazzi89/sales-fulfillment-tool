@@ -1,0 +1,73 @@
+.ltl-container {
+  input,
+  select {
+    height: 1.5rem;
+  }
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .ltl-title {
+    font-size: 2rem;
+    font-weight: bolder;
+    padding-bottom: 1rem;
+  }
+  .ltl-form {
+    width: 100%;
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    div {
+      padding-bottom: 1rem;
+    }
+    .ltl-select-state {
+      display: flex;
+      flex-direction: row;
+    }
+    .oregon-container,
+    .zip-code {
+      padding-bottom: 2rem;
+      input,
+      select {
+        margin-left: 1rem;
+      }
+    }
+    .pallet-number {
+      display: flex;
+      input {
+        margin-left: 1rem;
+      }
+    }
+    .fifty-container {
+      display: flex;
+      align-items: center;
+      input {
+        margin-left: 1rem;
+      }
+    }
+    .ltl-results {
+      width: 500px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .ltl-results-container {
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+        padding-bottom: 0;
+        .ltl-results-col1 {
+          display: flex;
+          width: 25%;
+          justify-content: flex-end;
+        }
+        .ltl-results-col2 {
+          width: 25%;
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+        }
+      }
+    }
+  }
+}

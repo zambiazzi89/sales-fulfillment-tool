@@ -1,0 +1,19 @@
+.lbs-to-cases-container {
+  margin-top: 2rem;
+  div {
+    padding-bottom: 0.5rem;
+  }
+  input {
+    height: 1.5rem;
+    width: 90px;
+    margin-right: 1rem;
+  }
+  .input-and-warning {
+    display: flex;
+    flex-direction: row;
+    .danger {
+      padding-left: 1rem;
+      color: red;
+    }
+  }
+}

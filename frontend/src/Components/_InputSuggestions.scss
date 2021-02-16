@@ -1,0 +1,29 @@
+.flex-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin-left: 1rem;
+  input {
+    height: 1.5rem;
+  }
+  .suggestion-container {
+    max-height: 300px;
+    overflow-y: scroll;
+    position: absolute;
+    background-color: rgb(255, 255, 255);
+    top: 1.5rem;
+    z-index: 999;
+    .option {
+      color: black;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 5px;
+      &:hover,
+      &:focus {
+        cursor: pointer;
+        background-color: #f15d225b;
+      }
+    }
+  }
+}
