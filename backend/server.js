@@ -1,3 +1,4 @@
+import path from 'path'
 import express from 'express'
 import dotenv from 'dotenv'
 import colors from 'colors'
@@ -21,10 +22,6 @@ const app = express()
 
 app.use(express.json()) // Allows accepting Json data in the body
 
-app.get('/', (req, res) => {
-  res.send('API is running.')
-})
-
 app.use('/api/users', userRoutes)
 
 app.use(`${process.env.RHINO_ROUTE}/customers`, customerRoutes)
@@ -35,8 +32,21 @@ app.use(`${process.env.GUEST_ROUTE}/customers`, fakeCustomerRoutes)
 app.use(`${process.env.GUEST_ROUTE}/items`, fakeItemRoutes)
 app.use(`${process.env.GUEST_ROUTE}/LTL`, fakeLTLRoutes)
 
-app.use(notFound)
+const __dirname = path.resolve()
 
+if (process.env.NODE_ENV === 'production') {
+  app.use(express.static(path.join(__dirname, '/frontend/build')))
+
+  app.get('*', (req, res) =>
+    res.sendFile(path.resolve(__dirname, 'frontend', 'build', 'index.html'))
+  )
+} else {
+  app.get('/', (req, res) => {
+    res.send('API is running.')
+  })
+}
+
+app.use(notFound)
 app.use(errorHandler)
 
 const PORT = process.env.PORT || 5000
