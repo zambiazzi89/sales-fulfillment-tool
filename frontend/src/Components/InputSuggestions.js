@@ -1,5 +1,5 @@
 import React, { createRef, useEffect, useRef, useState } from 'react'
-import './_InputSuggestions.scss'
+import '../Styles/_InputSuggestions.scss'
 
 const InputSuggestions = ({
   placeholder,

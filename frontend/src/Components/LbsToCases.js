@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useRef } from 'react'
-import './_LbsToCases.scss'
+import '../Styles/_LbsToCases.scss'
 
 const LbsToCases = ({ lbsPerCase, casePerPallet }) => {
   const [numLbs, setNumLbs] = useState('')

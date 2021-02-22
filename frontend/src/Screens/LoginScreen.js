@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 //import { FaEye } from 'react-icons/fa'
 import { login } from '../Actions/userActions'
-import './_LoginScreen.scss'
+import '../Styles/_LoginScreen.scss'
 
 const LoginScreen = ({ history }) => {
   const [username, setUsername] = useState('')

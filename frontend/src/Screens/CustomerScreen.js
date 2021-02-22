@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import '../Styles/_CustomerScreen.scss'
 import { useDispatch, useSelector } from 'react-redux'
 import { listCustomerDetails } from '../Actions/customerActions'
 import InputSuggestions from '../Components/InputSuggestions'

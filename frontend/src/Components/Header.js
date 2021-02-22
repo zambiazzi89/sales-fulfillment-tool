@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import '../Styles/_Header.scss'
 import { Link, useHistory } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux'
 import logo from '../Images/rhino_foods_logo.png'

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import './_LTLScreen.scss'
+import '../Styles/_LTLScreen.scss'
 import InputSuggestions from '../Components/InputSuggestions'
 import { useDispatch, useSelector } from 'react-redux'
 import { listLTL } from '../Actions/LTLActions'

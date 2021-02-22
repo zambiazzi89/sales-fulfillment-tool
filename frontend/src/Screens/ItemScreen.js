@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react'
+import '../Styles/_ItemScreen.scss'
 import { useDispatch, useSelector } from 'react-redux'
 import LbsToCases from '../Components/LbsToCases'
 import { listItemDetails } from '../Actions/itemActions'

@@ -1,5 +1,5 @@
 import React from 'react'
-import './_CustomerShipping.scss'
+import '../Styles/_CustomerShipping.scss'
 import { FaTruck, FaBarcode, FaStickyNote } from 'react-icons/fa'
 import { Link } from 'react-router-dom'
 
