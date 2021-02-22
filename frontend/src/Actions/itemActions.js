@@ -59,13 +59,6 @@ export const listItemDetails = (id) => async (dispatch, getState) => {
       },
     }
 
-    let apiPath
-    if (userInfo.isAdmin) {
-      apiPath = process.env.REACT_APP_RHINO_ROUTE
-    } else {
-      apiPath = process.env.REACT_APP_GUEST_ROUTE
-    }
-
     const { data } = await axios.get(`${userInfo.apiPath}/items/${id}`, config)
 
     dispatch({ type: ITEM_DETAILS_SUCCESS, payload: data })
