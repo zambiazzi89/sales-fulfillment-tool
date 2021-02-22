@@ -13,8 +13,8 @@ router.get(
   protect,
   admin,
   asyncHandler(async (req, res) => {
-    const ltlValues = await LTL.findById('LTL_id')
-    res.json(ltlValues)
+    const { stateValues } = await LTL.findById('LTL_id')
+    res.json({ LTL: stateValues, threePL: process.env.RHINO_LTL })
   })
 )
 

@@ -21,17 +21,7 @@ const LTLScreen = ({ match }) => {
   const dispatch = useDispatch()
 
   const LTLList = useSelector((state) => state.LTLList)
-  const { loading, error, LTL } = LTLList
-
-  const userLogin = useSelector((state) => state.userLogin)
-  const { userInfo } = userLogin
-
-  let threePLCost
-  if (userInfo && userInfo.isAdmin) {
-    threePLCost = process.env.REACT_APP_RHINO_LTL * pallets
-  } else {
-    threePLCost = process.env.REACT_APP_GUEST_LTL * pallets
-  }
+  const { loading, error, data } = LTLList
 
   useEffect(() => {
     dispatch(listLTL())
@@ -43,51 +33,53 @@ const LTLScreen = ({ match }) => {
       setStateRegionOrCity(oregonCity)
       setSelectedLTLCost(
         // Solves JS's floating point multiplication precision issue
-        Math.round(LTL.OR[oregonCity][valueLevel] * pallets * 100) / 100
+        Math.round(data.LTL.OR[oregonCity][valueLevel] * pallets * 100) / 100
       )
     } else if (LTLsearch && complexStates.includes(LTLsearch) && stateRegion) {
       setSelectedState(LTLsearch)
       setStateRegionOrCity(stateRegion)
       setSelectedLTLCost(
         Math.round(
-          LTL[LTLsearch][stateRegion].values[valueLevel] * pallets * 100
+          data.LTL[LTLsearch][stateRegion].values[valueLevel] * pallets * 100
         ) / 100
       )
     } else if (
-      Object.keys(LTL).includes(LTLsearch) &&
+      Object.keys(data.LTL).includes(LTLsearch) &&
       !complexStates.includes(LTLsearch)
     ) {
       setSelectedState(LTLsearch)
       setStateRegionOrCity('')
       setSelectedLTLCost(
-        Math.round(LTL[LTLsearch][valueLevel] * pallets * 100) / 100
+        Math.round(data.LTL[LTLsearch][valueLevel] * pallets * 100) / 100
       )
     } else {
       setSelectedState('')
       setStateRegionOrCity('')
       setSelectedLTLCost(null)
     }
-  }, [LTLsearch, oregonCity, pallets, stateRegion, valueLevel, LTL])
+  }, [LTLsearch, oregonCity, pallets, stateRegion, valueLevel, data])
 
   useEffect(() => {
-    if (complexStates.includes(LTLsearch)) {
-      if (
-        LTL[LTLsearch][
-          Object.keys(LTL[LTLsearch])[0] // First key
-        ].zipCodes.includes(parseInt(zipCode))
-      ) {
-        setStateRegion(Object.keys(LTL[LTLsearch])[0])
-      } else if (
-        LTL[LTLsearch][
-          Object.keys(LTL[LTLsearch])[1] // Second key
-        ].zipCodes.includes(parseInt(zipCode))
-      ) {
-        setStateRegion(Object.keys(LTL[LTLsearch])[1])
-      } else {
-        setStateRegion('')
+    if (data.LTL) {
+      if (complexStates.includes(LTLsearch)) {
+        if (
+          data.LTL[LTLsearch][
+            Object.keys(data.LTL[LTLsearch])[0] // First key
+          ].zipCodes.includes(parseInt(zipCode))
+        ) {
+          setStateRegion(Object.keys(data.LTL[LTLsearch])[0])
+        } else if (
+          data.LTL[LTLsearch][
+            Object.keys(data.LTL[LTLsearch])[1] // Second key
+          ].zipCodes.includes(parseInt(zipCode))
+        ) {
+          setStateRegion(Object.keys(data.LTL[LTLsearch])[1])
+        } else {
+          setStateRegion('')
+        }
       }
     }
-  }, [zipCode, LTLsearch, LTL])
+  }, [zipCode, LTLsearch, data])
 
   useEffect(() => {
     setStateRegion('')
@@ -121,7 +113,7 @@ const LTLScreen = ({ match }) => {
         <div className="ltl-select-state">
           Select a State
           <InputSuggestions
-            optionArray={Object.keys(LTL)}
+            optionArray={Object.keys(data.LTL)}
             widthValue="100px"
             placeholder="State"
             search={LTLsearch}
@@ -218,17 +210,22 @@ const LTLScreen = ({ match }) => {
             )}
             <div className="ltl-results-container">
               <div className="ltl-results-col1 sm-bold">3PL</div>
-              <div className="ltl-results-col2">{threePLCost}</div>
+              <div className="ltl-results-col2">{data.threePL * pallets}</div>
             </div>
             <div className="ltl-results-container">
               <div className="ltl-results-col1 sm-bold">TOTAL</div>
               <div className="ltl-results-col2">
                 {fiftySelected ? (
                   <div>
-                    $ {Math.ceil(selectedLTLCost * 1.61 * 1.5) + threePLCost}
+                    ${' '}
+                    {Math.ceil(selectedLTLCost * 1.61 * 1.5) +
+                      data.threePL * pallets}
                   </div>
                 ) : (
-                  <div>$ {Math.ceil(selectedLTLCost * 1.61) + threePLCost}</div>
+                  <div>
+                    ${' '}
+                    {Math.ceil(selectedLTLCost * 1.61) + data.threePL * pallets}
+                  </div>
                 )}
               </div>
             </div>

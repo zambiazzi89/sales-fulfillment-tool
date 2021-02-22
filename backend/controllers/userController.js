@@ -15,11 +15,18 @@ const authUser = asyncHandler(async (req, res) => {
     const user = await User.findOne({ username })
 
     if (user && (await user.matchPassword(password))) {
+      let apiPath
+      if (user.isAdmin) {
+        apiPath = process.env.RHINO_ROUTE
+      } else {
+        apiPath = process.env.GUEST_ROUTE
+      }
       res.json({
         _id: user._id,
         name: user.name,
         isAdmin: user.isAdmin,
         token: generateToken(user._id),
+        apiPath: apiPath,
       })
     } else {
       res.status(401) // 401: Unauthorized

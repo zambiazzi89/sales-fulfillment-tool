@@ -4,12 +4,15 @@ import {
   LTL_LIST_SUCCESS,
 } from '../Constants/LTLConstants'
 
-export const LTLListReducer = (state = { LTL: {} }, action) => {
+export const LTLListReducer = (
+  state = { loading: true, data: { LTL: {}, threePL: {} } },
+  action
+) => {
   switch (action.type) {
     case LTL_LIST_REQUEST:
-      return { loading: true, LTL: {} }
+      return { loading: true, ...state }
     case LTL_LIST_SUCCESS:
-      return { loading: false, LTL: action.payload }
+      return { loading: false, data: action.payload }
     case LTL_LIST_FAIL:
       return { loading: false, error: action.payload }
     default:

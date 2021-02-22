@@ -24,14 +24,7 @@ export const listItems = () => async (dispatch, getState) => {
       },
     }
 
-    let apiPath
-    if (userInfo.isAdmin) {
-      apiPath = process.env.REACT_APP_RHINO_ROUTE
-    } else {
-      apiPath = process.env.REACT_APP_GUEST_ROUTE
-    }
-
-    const { data } = await axios.get(`${apiPath}/items`, config)
+    const { data } = await axios.get(`${userInfo.apiPath}/items`, config)
 
     const dataItems = data.map((obj) => obj._id).sort()
 
@@ -73,7 +66,7 @@ export const listItemDetails = (id) => async (dispatch, getState) => {
       apiPath = process.env.REACT_APP_GUEST_ROUTE
     }
 
-    const { data } = await axios.get(`${apiPath}/items/${id}`, config)
+    const { data } = await axios.get(`${userInfo.apiPath}/items/${id}`, config)
 
     dispatch({ type: ITEM_DETAILS_SUCCESS, payload: data })
   } catch (error) {

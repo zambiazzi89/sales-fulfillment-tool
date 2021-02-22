@@ -42,7 +42,10 @@ const getCustomerById = asyncHandler(async (req, res) => {
     }
     const customerItemObject = await itemEntries()
 
-    res.json({ customer: customer, customerItemObject: customerItemObject })
+    res.json({
+      customer: customer,
+      customerItemObject: customerItemObject,
+    })
   } else {
     res.status(404)
     throw new Error('Customer not found')

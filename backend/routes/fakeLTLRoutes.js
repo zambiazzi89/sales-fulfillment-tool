@@ -12,8 +12,8 @@ router.get(
   '/',
   protect,
   asyncHandler(async (req, res) => {
-    const ltlValues = await FakeLTL.findById('fake_LTL_id')
-    res.json(ltlValues)
+    const { stateValues } = await FakeLTL.findById('fake_LTL_id')
+    res.json({ LTL: stateValues, threePL: process.env.GUEST_LTL })
   })
 )
 

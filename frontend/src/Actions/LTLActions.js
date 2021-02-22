@@ -21,18 +21,9 @@ export const listLTL = () => async (dispatch, getState) => {
       },
     }
 
-    let apiPath
-    if (userInfo.isAdmin) {
-      apiPath = process.env.REACT_APP_RHINO_ROUTE
-    } else {
-      apiPath = process.env.REACT_APP_GUEST_ROUTE
-    }
+    const { data } = await axios.get(`${userInfo.apiPath}/LTL`, config)
 
-    const { data } = await axios.get(`${apiPath}/LTL`, config)
-
-    const dataLTL = data.stateValues
-
-    dispatch({ type: LTL_LIST_SUCCESS, payload: dataLTL })
+    dispatch({ type: LTL_LIST_SUCCESS, payload: data })
   } catch (error) {
     const message =
       error.response && error.response.data.message

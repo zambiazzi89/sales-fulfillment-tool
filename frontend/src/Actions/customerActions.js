@@ -23,14 +23,7 @@ export const listCustomers = () => async (dispatch, getState) => {
       },
     }
 
-    let apiPath
-    if (userInfo.isAdmin) {
-      apiPath = process.env.REACT_APP_RHINO_ROUTE
-    } else {
-      apiPath = process.env.REACT_APP_GUEST_ROUTE
-    }
-
-    const { data } = await axios.get(`${apiPath}/customers`, config)
+    const { data } = await axios.get(`${userInfo.apiPath}/customers`, config)
 
     const dataCustomers = data.map((obj) => obj._id).sort()
 
@@ -65,14 +58,10 @@ export const listCustomerDetails = (id) => async (dispatch, getState) => {
       },
     }
 
-    let apiPath
-    if (userInfo.isAdmin) {
-      apiPath = process.env.REACT_APP_RHINO_ROUTE
-    } else {
-      apiPath = process.env.REACT_APP_GUEST_ROUTE
-    }
-
-    const { data } = await axios.get(`${apiPath}/customers/${id}`, config)
+    const { data } = await axios.get(
+      `${userInfo.apiPath}/customers/${id}`,
+      config
+    )
 
     dispatch({
       type: CUSTOMER_DETAILS_SUCCESS,
