@@ -44,73 +44,65 @@ const CustomerScreen = ({ match }) => {
     <div>{error}</div>
   ) : (
     <div className="customer-info-container">
-      <div className="customer-col-1">
-        <div className="customer-name">
-          <div className=" lg-bold">{data.customer.name}</div>
-          <div className="md-bold">{data.customer._id}</div>
-        </div>
+      <div className="customer-name">
+        <div className="lg-bold">{data.customer.name}</div>
+        <div className="md-bold">{data.customer._id}</div>
       </div>
-      <div className="customer-col-2">
-        <div className="customer-items-container">
-          <div className="customer-items-title md-bold">Customer Items</div>
-          <div className="input-customer-items-container">
-            Filter By Item Number
-            <InputSuggestions
-              placeholder="Type Item For Suggestions"
-              className="input-customer-items"
-              optionArray={Object.values(data.customer.items)}
-              widthValue="300px"
-              search={customerSearch}
-              setSearch={setCustomerSearch}
-              setSelectedOption={setCustomerSearch}
-            />
+      <div className="customer-items-container">
+        <div className="customer-items-title md-bold">Customer Items</div>
+        <div className="input-customer-items-container">
+          <label className="desktop-only">Filter By Item Number</label>
+          <InputSuggestions
+            placeholder="Type Item For Suggestions"
+            className="input-customer-items"
+            optionArray={Object.values(data.customer.items)}
+            widthValue="250px"
+            search={customerSearch}
+            setSearch={setCustomerSearch}
+            setSelectedOption={setCustomerSearch}
+          />
+        </div>
+        <div className="item-header sm-bold item-info-area">
+          <div className="info-sub">
+            <div className="info-in">Item #</div>
+            <div className="info-cin">Customer Item #</div>
+            <div className="info-cpp">Cases/Pallet</div>
+            <div className="info-lpc">Lbs/Case</div>
           </div>
-          <div className="item-header sm-bold item-info-area">
-            <div className="info-sub-flex">
-              <div className="info-in">Item #</div>
-              <div className="info-cin">Customer Item #</div>
-              <div className="info-cpp">Cases/Pallet</div>
-              <div className="info-lpc">Lbs/Case</div>
-            </div>
-          </div>
-          {Object.keys(data.customer.items)
-            .filter(
-              (item) =>
-                data.customer.items[item]
-                  .toLowerCase()
-                  .indexOf(customerSearch.toLowerCase()) > -1
-            )
-            .map(
-              (item) =>
-                data.customerItemObject[item] && (
-                  <div key={item} className="item-rows item-info-area">
-                    <div className="info-sub-flex">
-                      <div className="info-in">{item}</div>
-                      <div className="info-cin">
-                        {data.customer.items[item]}
-                      </div>
-                      <div className="info-cpp">
-                        {data.customerItemObject[item].casesPerPallet}
-                      </div>
-                      <div className="info-lpc">
-                        {data.customerItemObject[item].lbsPerCase}
-                      </div>
+        </div>
+        {Object.keys(data.customer.items)
+          .filter(
+            (item) =>
+              data.customer.items[item]
+                .toLowerCase()
+                .indexOf(customerSearch.toLowerCase()) > -1
+          )
+          .map(
+            (item) =>
+              data.customerItemObject[item] && (
+                <div key={item} className="item-rows item-info-area">
+                  <div className="info-sub">
+                    <div className="info-in">{item}</div>
+                    <div className="info-cin">{data.customer.items[item]}</div>
+                    <div className="info-cpp">
+                      {data.customerItemObject[item].casesPerPallet}
                     </div>
-                    <div className="info-dt">
-                      {data.customerItemObject[item].description}
+                    <div className="info-lpc">
+                      {data.customerItemObject[item].lbsPerCase}
                     </div>
                   </div>
-                )
-            )}
-          {selectedItem && (
-            <LbsToCases
-              lbsPerCase={data.customerItemObject[selectedItem].lbsPerCase}
-              casePerPallet={
-                data.customerItemObject[selectedItem].casesPerPallet
-              }
-            />
+                  <div className="info-dt">
+                    {data.customerItemObject[item].description}
+                  </div>
+                </div>
+              )
           )}
-        </div>
+        {selectedItem && (
+          <LbsToCases
+            lbsPerCase={data.customerItemObject[selectedItem].lbsPerCase}
+            casePerPallet={data.customerItemObject[selectedItem].casesPerPallet}
+          />
+        )}
       </div>
     </div>
   )

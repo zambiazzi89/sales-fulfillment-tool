@@ -1,6 +1,5 @@
 .login-screen {
   width: 100%;
-  width: 100%;
   display: grid;
   place-items: center;
   .login-container {
@@ -48,6 +47,15 @@
         cursor: pointer;
         background-color: rgba(0, 0, 0, 0.5);
       }
+    }
+  }
+}
+
+@media all and (max-width: 640px) {
+  .login-screen {
+    .login-container {
+      width: 310px;
+      height: 300px;
     }
   }
 }

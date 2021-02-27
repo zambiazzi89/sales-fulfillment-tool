@@ -1,5 +1,6 @@
 .lbs-to-cases-container {
   margin-top: 2rem;
+  margin-bottom: 2rem;
   div {
     padding-bottom: 0.5rem;
   }
@@ -11,9 +12,24 @@
   .input-and-warning {
     display: flex;
     flex-direction: row;
-    .danger {
+    align-items: center;
+    .warning {
       padding-left: 1rem;
       color: red;
+    }
+  }
+}
+
+@media all and (max-width: 640px) {
+  .lbs-to-cases-container {
+    input {
+      margin-right: 0.5rem;
+    }
+    .input-and-warning {
+      .warning {
+        font-size: small;
+        padding-left: 0.5rem;
+      }
     }
   }
 }

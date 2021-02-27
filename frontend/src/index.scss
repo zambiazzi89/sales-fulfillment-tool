@@ -42,11 +42,12 @@ body {
   min-height: 100%;
   .body-container {
     display: flex;
-    padding: 30px;
     min-height: calc(100vh - 150px);
     background-color: white;
     .home-view {
+      padding: 20px;
       font-weight: bolder;
+      text-align: center;
       min-height: 100%;
       width: 100%;
       display: flex;
@@ -67,6 +68,26 @@ body {
       }
       .home-message {
         font-size: 1.5rem;
+      }
+    }
+  }
+}
+
+@media all and (max-width: 640px) {
+  .App {
+    .body-container {
+      .home-view {
+        margin-top: 1rem;
+        justify-content: flex-start;
+        .home-hi-user {
+          font-size: 1.5rem;
+        }
+        .home-welcome {
+          font-size: 1.5rem;
+        }
+        .home-message {
+          font-size: 1rem;
+        }
       }
     }
   }

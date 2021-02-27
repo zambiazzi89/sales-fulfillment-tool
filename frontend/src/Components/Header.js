@@ -6,11 +6,11 @@ import logo from '../Images/rhino_foods_logo.png'
 import b_corp from '../Images/b_corp_2020.png'
 import HeaderBackground from './HeaderBackground'
 import delicious_things from '../Images/delicious_things.svg'
+import { FaBars } from 'react-icons/fa'
 import InputSuggestions from './InputSuggestions'
 import { listItems } from '../Actions/itemActions'
 import { listCustomers } from '../Actions/customerActions'
 import { logout } from '../Actions/userActions'
-import { FaUser } from 'react-icons/fa'
 import { IoLogOutOutline } from 'react-icons/io5'
 
 const Header = ({ match }) => {
@@ -68,57 +68,60 @@ const Header = ({ match }) => {
   return (
     <div className="header-and-guest-warning">
       <div className="header-background-color">
-        <div className="hide-headerbackground-overflow">
+        <div>
           <HeaderBackground />
         </div>
         <div className="header-and-subheader">
           <header>
-            <Link to="/">
-              <img src={logo} alt="Logo" className="logo" />
+            <Link to="/" className="logo">
+              <img src={logo} alt="Logo" />
             </Link>
             <a
               href="https://www.rhinofoods.com/"
               target="_blank"
               rel="noreferrer noopener"
+              className="delicious-things"
             >
-              <img
-                src={delicious_things}
-                alt="Delicious Things, Done Right."
-                className="delicious-things"
-              />
+              <img src={delicious_things} alt="Delicious Things, Done Right." />
             </a>
             <a
               href="https://www.rhinofoods.com/certified-b-corporation"
               target="_blank"
               rel="noreferrer noopener"
+              className="b-corp"
             >
-              <img src={b_corp} alt="B Corp 2020" className="b-corp" />
+              <img src={b_corp} alt="B Corp 2020" />
             </a>
+
+            <div className="hamburger-button">
+              <FaBars />
+            </div>
           </header>
           <div className="sub-header">
             {customerListLoading || itemListLoading ? (
               <div>Loading...</div>
             ) : customerListError || itemListError || !(customers || items) ? (
-              <Link to="./login" className="login-link">
-                <FaUser />
-                <div>LOGIN</div>
-              </Link>
+              <div>Login to display menu</div>
             ) : (
-              <>
+              <div className="subheader-links">
                 <div className="customer-menu">
-                  <label htmlFor="customers">Customer</label>
+                  <label htmlFor="customers" className="desktop-only">
+                    Customer
+                  </label>
                   <InputSuggestions
                     placeholder="Select a Customer"
                     className="input-header-customers"
                     optionArray={customers}
-                    widthValue="150px"
+                    widthValue="120px"
                     search={customerSearch}
                     setSearch={setCustomerSearch}
                     setSelectedOption={setSelectedCustomer}
                   />
                 </div>
                 <div className="item-menu">
-                  <label htmlFor="items">Item</label>
+                  <label htmlFor="items" className="desktop-only">
+                    Item
+                  </label>
                   <InputSuggestions
                     placeholder="Select an Item"
                     className="input-header-items"
@@ -130,7 +133,8 @@ const Header = ({ match }) => {
                   />
                 </div>
                 <Link to="/LTL" className="subheader-button">
-                  <div> LTL Calculator</div>
+                  <div className="desktop-only">LTL Calculator</div>
+                  <div className="mobile-only">LTL</div>
                 </Link>
                 {/*
               <Link to="/Info-Procedures" className="subheader-button">
@@ -143,9 +147,9 @@ const Header = ({ match }) => {
                   onClick={logoutHandler}
                 >
                   <IoLogOutOutline />
-                  <div>LOGOUT</div>
+                  <div className="logout desktop-only">LOGOUT</div>
                 </Link>
-              </>
+              </div>
             )}
           </div>
         </div>

@@ -69,7 +69,7 @@ const LbsToCases = ({ lbsPerCase, casePerPallet }) => {
           value={numLbs}
           onChange={(e) => handleLbsChange(e)}
         />
-        Lbs
+        <label>Lbs</label>
       </div>
       <div className="input-and-warning">
         <input
@@ -81,9 +81,9 @@ const LbsToCases = ({ lbsPerCase, casePerPallet }) => {
           value={numCases}
           onChange={(e) => handleCaseChange(e)}
         />
-        Cases
+        <label>Cases</label>
         {!Number.isInteger(numCases) && (
-          <div className="danger sm-bold">Not Full Case Quantity!</div>
+          <div className="warning sm-bold">Not Full Case Quantity!</div>
         )}
       </div>
       <div className="input-and-warning">
@@ -97,9 +97,9 @@ const LbsToCases = ({ lbsPerCase, casePerPallet }) => {
           onChange={(e) => handlePalletChange(e)}
           maxLength={4}
         />
-        Pallets
+        <label>Pallets</label>
         {!Number.isInteger(numPallets) && (
-          <div className="danger sm-bold">Not Full Pallet Quantity!</div>
+          <div className="warning sm-bold">Not Full Pallet Quantity!</div>
         )}
       </div>
     </div>
