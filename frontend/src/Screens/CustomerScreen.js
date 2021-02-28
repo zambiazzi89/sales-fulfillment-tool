@@ -23,7 +23,7 @@ const CustomerScreen = ({ match }) => {
   }, [match, dispatch])
 
   useEffect(() => {
-    if (data.customer.items) {
+    if (data && data.customer.items) {
       if (Object.values(data.customer.items).includes(customerSearch)) {
         setSelectedItem(
           Object.keys(data.customer.items).find(

@@ -9,17 +9,13 @@ const HomeScreen = () => {
     <div>Loading...</div>
   ) : error ? (
     <div className="login-error">{error}</div>
-  ) : (
-    userInfo && (
-      <div className="home-view">
-        <div className="home-hi-user">Hi {userInfo.name},</div>
-        <div className="home-welcome">Welcome to the Fulfillment Tool!</div>
-        <div className="home-message">
-          Please select an option from the menu
-        </div>
-      </div>
-    )
-  )
+  ) : userInfo ? (
+    <div className="home-view">
+      <div className="home-hi-user">Hi {userInfo.name},</div>
+      <div className="home-welcome">Welcome to the Fulfillment Tool!</div>
+      <div className="home-message">Please select an option from the menu</div>
+    </div>
+  ) : null
 }
 
 export default HomeScreen

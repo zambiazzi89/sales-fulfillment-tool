@@ -10,6 +10,9 @@
     overflow-y: scroll;
     position: absolute;
     background-color: rgb(255, 255, 255);
+    border-left: 1px solid #f15c22;
+    border-bottom: 1px solid #f15c22;
+    border-right: 1px solid #f15c22;
     top: 1.5rem;
     z-index: 999;
     .option {
