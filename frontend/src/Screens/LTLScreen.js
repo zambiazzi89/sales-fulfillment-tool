@@ -111,7 +111,7 @@ const LTLScreen = ({ match }) => {
       <div className="ltl-title">LTL Calculator</div>
       <div className="ltl-form">
         <div className="ltl-select-state">
-          Select a State
+          <label>Select a State</label>
           <InputSuggestions
             optionArray={Object.keys(data.LTL)}
             widthValue="100px"
